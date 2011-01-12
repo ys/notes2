@@ -29,7 +29,11 @@ function addTodo() {
 }
 function addCategory() {
     var data = $('#newCategory').val();
-    var newMenuItem = $('<li></li>');
+    addCategory(data);
+
+}
+function addCategory(data){
+	var newMenuItem = $('<li></li>');
     var newCategory = $('<a href="#' + data + '" rel="' + data + '"></a>');
     newCategory.text(data);
     newMenuItem.append(newCategory);
@@ -42,8 +46,7 @@ function addCategory() {
     categories.push(data);
     localStorage.setItem("categories", JSON.stringify(categories));
     loadTodos(data);
-    bindFields();
-
+    bindFields();	
 }
 function removeTodo(index) {
     var category = $('a.selected').attr('rel');
@@ -152,9 +155,27 @@ function publishListForTwoMinutes(){
 function importCategory(){
 	var url = $('#importUrl').val();
 	$.getJSON(url, function(data) {
-	  alert(data["category"]+":"+data["list"]);
+		var category = data["category"];
+		if (containsCategory(category)){
+			var date = new Date();
+			category = category+" "+date.toLocaleString();
+		}
+		addCategory(category);
+		localStorage.setItem("todos" + category, JSON.stringify(data["list"]));
+		
 	});
 	
+}
+
+function containsCategory(category){
+	var cat = JSON.parse(localStorage.getItem("categories"));
+    if (cat != null) {
+        for (i = 0; i < cat.length; i++) {
+            var c = cat[i];
+            if(c==category) return true;
+        }
+    }
+	return false;
 }
 
 function activatePlaceholders() {
