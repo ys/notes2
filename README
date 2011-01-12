@@ -1,0 +1,2 @@
+This is a notes app, with a sharing option on a backend.
+I used Sinatra and redis to share it... The publish option makes the category available for two minutes online.
