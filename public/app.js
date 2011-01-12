@@ -139,7 +139,8 @@ function loadCategories() {
 function publishListForTwoMinutes(){
 	var category = $('a.selected').attr('rel');
     var todos = JSON.parse(localStorage.getItem("todos" + category));
-	$.post('/',{ category : JSON.stringify(todos)},  function(data) {
+	var post = '{'+category+':'+JSON.stringify(todos)+'}';
+	$.post('/',post,  function(data) {
 	  alert(data);
 	}, 'json');
 }
