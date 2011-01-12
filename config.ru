@@ -3,5 +3,5 @@ require 'bundler'
 
 Bundler.require
 
-require 'twominutes'
-run twominutes
+require 'TwoMinutes'
+run TwoMinutes
