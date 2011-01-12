@@ -20,5 +20,5 @@ end
 
 get '/:key' do
   content_type :json
-  REDIS[params[:key]].to_json
+  REDIS[params[:key]]
 end
