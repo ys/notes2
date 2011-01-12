@@ -114,10 +114,12 @@ menu{
 	padding:0;
 }
 #importSection{
+	position:relative;
 	display:none;
 	
 }
 #importSection input{
 	float:right;
+	width:200px;
 }
 
