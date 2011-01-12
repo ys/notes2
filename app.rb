@@ -13,8 +13,8 @@ end
 put '/' do
   json = request.body.read
   key = Digest::MD5.hexdigest(json)
-  redis[key] = json.to_json
-  redis.expire(key, 120)
+  @redis[key] = json.to_json
+  @redis.expire(key, 120)
   'http://high-fog-986.heroku.com/'+key
 end
 
