@@ -160,8 +160,10 @@ function importCategory(){
 			var date = new Date();
 			category = category+" "+date.toLocaleString();
 		}
+		$('menu ul li').toggle('slide');
 		addCategory(category);
 		localStorage.setItem("todos" + category, JSON.stringify(data["list"]));
+		loadTodos(category);
 		
 	});
 	
