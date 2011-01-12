@@ -119,13 +119,6 @@ menu{
 }
 
 /* Z-index of #mask must lower than #boxes .window */
-#mask {
-  position:absolute;
-  z-index:9000;
-  background-color:#000;
-  display:none;
-
-}
   
 #boxes .window {
   position:absolute;
@@ -139,6 +132,8 @@ menu{
 
 /* Customize your modal window here, you can add background image too */
 #boxes #dialog {
+	border:5px solid black;
+	background-color:white;
   width:375px; 
   height:203px;
 }
