@@ -1,2 +1,4 @@
 sinatra
 redis
+json
+digest/md5
