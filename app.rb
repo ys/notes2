@@ -11,7 +11,7 @@ get '/' do
 end
 
 put '/' do
-  json = request.body
+  json = request.body.read
   key = Digest::MD5.hexdigest(json)
   redis[key] = json.to_json
   redis.expire(key, 120)
