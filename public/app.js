@@ -139,7 +139,7 @@ function loadCategories() {
 function publishListForTwoMinutes(){
 	var category = $('a.selected').attr('rel');
     var todos = JSON.parse(localStorage.getItem("todos" + category));
-	var post = '{"'+category+'":'+JSON.stringify(todos)+'}';
+	var post = '{"category":"'+category+'","list":'+JSON.stringify(todos)+'}';
 	$.ajax({
 	  type: 'POST',
 	  url: '/',
@@ -152,7 +152,7 @@ function publishListForTwoMinutes(){
 function importCategory(){
 	var url = $('#importUrl').val();
 	$.getJSON(url, function(data) {
-	  alert(data[0]+":"+data[1]);
+	  alert(data["category"]+":"+data["list"]);
 	});
 	
 }
