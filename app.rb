@@ -16,7 +16,7 @@ post '/' do
   REDIS[key] = json
   REDIS.expire(key, 120)
   content_type :json
-  "{ 'url' : 'http://high-fog-986.heroku.com/"+key+"'}"
+  "{ url : 'http://high-fog-986.heroku.com/"+key+"'}"
 end
 
 get '/:key' do
