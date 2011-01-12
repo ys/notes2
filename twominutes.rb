@@ -23,6 +23,10 @@ end
 
 get '/:key' do
   content_type :json
-  REDIS[params[:key]]
+  if (REDIS.exists(params[:key]))
+    REDIS[params[:key]]
+  else
+    '{"error":"not found"}';
+  end
 end
 end
