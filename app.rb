@@ -10,7 +10,7 @@ get '/' do
   redirect '/index.html'
 end
 
-put '/' do
+post '/' do
   json = request.body.read
   key = Digest::MD5.hexdigest(json)
   REDIS[key] = json

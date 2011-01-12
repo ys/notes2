@@ -136,6 +136,13 @@ function loadCategories() {
         }
     }
 }
+function publishListForTwoMinutes(){
+	var category = $('a.selected').attr('rel');
+    var todos = JSON.parse(localStorage.getItem("todos" + category));
+	$.post('/',{ category : JSON.stringify(todos)},  function(data) {
+	  alert(data);
+	}, 'json');
+}
 
 function activatePlaceholders() {
     var detect = navigator.userAgent.toLowerCase();
@@ -180,6 +187,9 @@ $(function() {
         loadTodos($(this).attr('rel'));
         return false;
     });
+	$('#publish').click(function(e){
+		publishListForTwoMinutes();
+	});
 
     $('#clear').click(function(e) {
         if (confirm("Are you sure you want to delete all todos?")) {
