@@ -3,6 +3,7 @@
 	padding:0;
 }
 body{
+	padding:25px;
 }
 body, input {
 	font-family: 'Josefin Sans', arial, serif;
