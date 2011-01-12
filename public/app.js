@@ -29,10 +29,10 @@ function addTodo() {
 }
 function addCategory() {
     var data = $('#newCategory').val();
-    addCategory(data);
+    addaCategory(data);
 
 }
-function addCategory(data){
+function addaCategory(data){
 	var newMenuItem = $('<li></li>');
     var newCategory = $('<a href="#' + data + '" rel="' + data + '"></a>');
     newCategory.text(data);
@@ -161,7 +161,7 @@ function importCategory(){
 			category = category+" "+date.toLocaleString();
 		}
 		$('menu ul li').show();
-		addCategory(category);
+		addaCategory(category);
 		localStorage.setItem("todos" + category, JSON.stringify(data["list"]));
 		loadTodos(category);
 		
