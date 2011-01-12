@@ -15,7 +15,8 @@ post '/' do
   key = Digest::MD5.hexdigest(json)
   REDIS[key] = json
   REDIS.expire(key, 120)
-  'http://high-fog-986.heroku.com/'+key
+  content_type :json
+  "{ 'url' : 'http://high-fog-986.heroku.com/"+key+"'}"
 end
 
 get '/:key' do
