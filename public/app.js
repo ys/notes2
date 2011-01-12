@@ -145,6 +145,9 @@ function publishListForTwoMinutes(){
 	  url: '/',
 	  data: post,
 	  success: function(data) {alert("coucou");},
+	  error: function(e, xhr){
+		alert(e);
+	  },
 	  dataType: 'json'
 	});
 }
