@@ -187,7 +187,7 @@ $(function() {
         loadTodos($(this).attr('rel'));
         return false;
     });
-	$('#publish').click(function(e){
+	$('#publish').click(function(){
 		publishListForTwoMinutes();
 	});
 
