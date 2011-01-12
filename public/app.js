@@ -144,11 +144,7 @@ function publishListForTwoMinutes(){
 	  type: 'POST',
 	  url: '/',
 	  data: post,
-	  success: function(data) {alert("coucou");},
-	  error:function (xhr, ajaxOptions, thrownError){
-	                    alert(xhr.status);
-	                    alert(thrownError);
-	                },
+	  success: function(data) {$('#publish').after('<a target="_blank" href="'+data.url+'">'+data.url+'</a>');},
 	  dataType: 'json'
 	});
 }
