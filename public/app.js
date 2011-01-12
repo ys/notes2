@@ -253,8 +253,8 @@ $(function() {
 			var winW = $(window).width();
 
 			//Set the popup window to center
-			$('#dialog').css('top',  winH/2-$(id).height()/2);
-			$('#dialog').css('left', winW/2-$(id).width()/2);
+			$('#dialog').css('top',  winH/2-$('#dialog').height()/2);
+			$('#dialog').css('left', winW/2-$('#dialog').width()/2);
 
 			//transition effect
 			$('#dialog').fadeIn(2000); 
