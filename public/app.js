@@ -140,9 +140,7 @@ function publishListForTwoMinutes(){
 	var category = $('a.selected').attr('rel');
     var todos = JSON.parse(localStorage.getItem("todos" + category));
 	var post = '{'+category+':'+JSON.stringify(todos)+'}';
-	$.post('/',post,  function(data) {
-	  alert(data);
-	}, 'json');
+	$.post('/', post,  function(data) {$('#publish').after('<a target="_blank" href="'+data+'">'+data+'</a>');}, 'json');
 }
 
 function activatePlaceholders() {
