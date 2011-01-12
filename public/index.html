@@ -16,17 +16,6 @@
 			<menu><ul><li><a href="#main" class="selected" rel="main">main</a></li></li><li id="lastItem"><input id="newCategory" type="text" placeholder="+ Add a Category"/></li></ul></menu>
 			<div id="actions"><a id="clear" href="#clean">clean</a> | <a id="import" href="#import">import</a> | <a id="publish" href="#publish">publish</a></div>
 		</header>
-		<div id="boxes">
-			<!-- #customize your modal window here -->
-			<div id="dialog" class="window">
-				<input type="text" id="importUrl" placeholder="import a list of notes from Url"/>
-				 | 
-				<!-- close button is defined as close class -->
-				<a href="#" class="close">Close it</a>
-			</div>
-			<!-- Do not remove div#mask, because you'll need it to fill the whole screen -->	
-		 	<div id="mask"></div>
-		</div>
 
 		<section id="todos">
 			
@@ -52,5 +41,13 @@
 		  })();
 
 		</script>
+		<div id="boxes">
+			<!-- #customize your modal window here -->
+			<div id="dialog" class="window">
+				<input type="text" id="importUrl" placeholder="import a list of notes from Url"/> | <a href="#" class="close">Close it</a>
+			</div>
+			<!-- Do not remove div#mask, because you'll need it to fill the whole screen -->	
+		 	<div id="mask"></div>
+		</div>
 	</body>
 </html>
