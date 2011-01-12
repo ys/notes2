@@ -144,7 +144,7 @@ function publishListForTwoMinutes(){
 	  type: 'POST',
 	  url: '/',
 	  data: post,
-	  success: function(data) {$('#publish').after('<a target="_blank" href="'+data.url+'">'+data.url+'</a>');},
+	  success: function(data) {$('#publish').fadeOut();$('#publish').after('<a target="_blank" href="'+data.url+'">published</a>');},
 	  dataType: 'json'
 	});
 	return false;
