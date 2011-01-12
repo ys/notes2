@@ -117,23 +117,7 @@ menu{
 	display:none;
 	
 }
-
-/* Z-index of #mask must lower than #boxes .window */
-  
-#boxes .window {
-  position:absolute;
-  width:440px;
-  height:200px;
-  display:none;
-  z-index:9999;
-  padding:20px;
+#importSection input{
+	float:right;
 }
 
-
-/* Customize your modal window here, you can add background image too */
-#boxes #dialog {
-	border:5px solid black;
-	background-color:white;
-	width:400px; 
-	height:25px;
-}

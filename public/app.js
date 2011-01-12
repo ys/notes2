@@ -160,7 +160,7 @@ function importCategory(){
 			var date = new Date();
 			category = category+randomString(3);
 		}
-		$('.window').hide();
+		$('#importSection').hide();
 		$('menu ul li').show();
 		addaCategory(category);
 		localStorage.setItem("todos" + category, JSON.stringify(data["list"]));
@@ -297,35 +297,8 @@ $(function() {
 	$('#import').click(function(e) {
 			//Cancel the link behavior
 			e.preventDefault();
-			//Get the A tag
-			
-
-			//Get the window height and width
-			var winH = $(window).height();
-			var winW = $(window).width();
-
-			//Set the popup window to center
-			$('#dialog').css('top',  winH/2-$('#dialog').height()/2);
-			$('#dialog').css('left', winW/2-$('#dialog').width()/2);
-
-			//transition effect
-			$('#dialog').fadeIn(2000); 
+			$('#importSection').slideToggle();
 
 		});
-
-		//if close button is clicked
-		$('.window .close').click(function (e) {
-			//Cancel the link behavior
-			e.preventDefault();
-			$('.window').hide();
-		});		
-
-	
-
-
-
-
-
-
 
 });
