@@ -38,13 +38,13 @@ article, #new{
 	margin-top:0;
 	position:relative;
 }
-#clear{
+#actions{
 	opacity:0.3;
 	position:absolute;
 	top:25px;
 	right:25px;
 }
-#clear:hover{
+#actions:hover{
 	opacity:1;
 }
 a{
