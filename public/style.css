@@ -124,6 +124,8 @@ menu{
   z-index:9000;
   background-color:#000;
   display:none;
+	top:0;
+	left:0;
 }
   
 #boxes .window {
