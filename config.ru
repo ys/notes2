@@ -3,5 +3,5 @@ require 'bundler'
 
 Bundler.require
 
-require './TwoMinutes'
+require './TwoMinutes.rb'
 run TwoMinutes
