@@ -3,7 +3,7 @@ require 'sinatra'
 require 'json'
 require 'redis'
 require 'digest/md5'
-class TwoMinutes < Sinatra::Base
+class TwoMinutes < Sinatra::Application
 
 uri = URI.parse(ENV["REDISTOGO_URL"])
 REDIS = Redis.new(:host => uri.host, :port => uri.port, :password => uri.password)
