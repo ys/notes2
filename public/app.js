@@ -144,8 +144,7 @@ function publishListForTwoMinutes(){
 	  type: 'POST',
 	  url: '/',
 	  data: post,
-	  success: function(data) {alert(data);$('#publish').after('<a target="_blank" href="'+data.url+'">'+data.url+'</a>');},
-	  dataType: 'json'
+	  success: function(data) {alert(data);$('#publish').after('<a target="_blank" href="'+data.url+'">'+data.url+'</a>');}
 	});
 }
 
