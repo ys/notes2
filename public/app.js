@@ -165,6 +165,8 @@ function importCategory(){
 		localStorage.setItem("todos" + category, JSON.stringify(data["list"]));
 		loadTodos(category);
 		
+		$('menu ul li[id="importSection"]').hide();
+		$('menu ul li[id="lastItem"]').show();
 		
 	});
 	
