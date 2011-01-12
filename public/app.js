@@ -144,7 +144,7 @@ function publishListForTwoMinutes(){
 	  type: 'POST',
 	  url: '/',
 	  data: post,
-	  success: appendResponse(data),
+	  success: appendResponse(msg),
 	  dataType: 'json'
 	});
 }
