@@ -114,12 +114,7 @@ menu{
 	padding:0;
 }
 #importSection{
-	position:relative;
-	display:none;
-	border-top:1px dotted black;
-	
+	display:none;	
 }
-#importSection input{
 
-}
 

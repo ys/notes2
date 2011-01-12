@@ -161,7 +161,6 @@ function importCategory(){
 			category = category+randomString(3);
 		}
 		$('#importSection').hide();
-		$('menu ul li').show();
 		addaCategory(category);
 		localStorage.setItem("todos" + category, JSON.stringify(data["list"]));
 		loadTodos(category);
@@ -275,7 +274,7 @@ $(function() {
         return false;
     });
     $('header h1').click(function() {
-        $('menu ul li').toggle('slide');
+        $('menu ul li[id!="importSection"]').toggle('slide');
     });
     $('input:checkbox').change(function() {
 
@@ -290,6 +289,7 @@ $(function() {
 	
 	$('#importUrl').keydown(function(e) {
         if (e.which == 13) {
+			
             importCategory();
         }
     });
@@ -297,7 +297,9 @@ $(function() {
 	$('#import').click(function(e) {
 			//Cancel the link behavior
 			e.preventDefault();
-			$('#importSection').slideToggle();
+			$('menu ul li[id!="importSection"]').show();
+			$('menu ul li[id=="importSection"]').show();
+			$('menu ul li[id=="newCategory"]').hide();
 
 		});
 
