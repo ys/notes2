@@ -152,7 +152,7 @@ function publishListForTwoMinutes(){
 function importCategory(){
 	var url = $('#importUrl').val();
 	$.getJSON(url, function(data) {
-	  alert(data);
+	  alert(data[0]+":"+data[1]);
 	});
 	
 }
