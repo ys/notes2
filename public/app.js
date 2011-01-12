@@ -246,18 +246,7 @@ $(function() {
 			//Cancel the link behavior
 			e.preventDefault();
 			//Get the A tag
-			var id = $(this).attr('href');
-
-			//Get the screen height and width
-			var maskHeight = $(document).height();
-			var maskWidth = $(window).width();
-
-			//Set height and width to mask to fill up the whole screen
-			$('#mask').css({'width':maskWidth,'height':maskHeight});
-
-			//transition effect		
-			$('#mask').fadeIn(1000);	
-			$('#mask').fadeTo("slow",0.8);	
+			
 
 			//Get the window height and width
 			var winH = $(window).height();
@@ -276,7 +265,7 @@ $(function() {
 		$('.window .close').click(function (e) {
 			//Cancel the link behavior
 			e.preventDefault();
-			$('#mask, .window').hide();
+			$('.window').hide();
 		});		
 
 		//if mask is clicked
