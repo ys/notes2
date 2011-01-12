@@ -139,7 +139,7 @@ function loadCategories() {
 function publishListForTwoMinutes(){
 	var category = $('a.selected').attr('rel');
     var todos = JSON.parse(localStorage.getItem("todos" + category));
-	var post = '{'+category+':'+JSON.stringify(todos)+'}';
+	var post = '{"'+category+'":"'+JSON.stringify(todos)+'"}';
 	$.ajax({
 	  type: 'POST',
 	  url: '/',
@@ -147,6 +147,7 @@ function publishListForTwoMinutes(){
 	  success: function(data) {$('#publish').after('<a target="_blank" href="'+data.url+'">'+data.url+'</a>');},
 	  dataType: 'json'
 	});
+	return false;
 }
 
 function activatePlaceholders() {
@@ -194,6 +195,7 @@ $(function() {
     });
 	$('#publish').click(function(){
 		publishListForTwoMinutes();
+		return false;
 	});
 
     $('#clear').click(function(e) {
