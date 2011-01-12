@@ -144,9 +144,12 @@ function publishListForTwoMinutes(){
 	  type: 'POST',
 	  url: '/',
 	  data: post,
-	  success: function(data) {alert("coucou");},
+	  success: appendResponse(data),
 	  dataType: 'json'
 	});
+}
+function appendResponse(data){
+	alert(data);
 }
 
 function activatePlaceholders() {
