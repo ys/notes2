@@ -298,8 +298,8 @@ $(function() {
 			//Cancel the link behavior
 			e.preventDefault();
 			$('menu ul li[id!="importSection"]').show();
-			$('menu ul li[id=="importSection"]').show();
-			$('menu ul li[id=="newCategory"]').hide();
+			$('menu ul li[id="importSection"]').show();
+			$('menu ul li[id="newCategory"]').hide();
 
 		});
 
