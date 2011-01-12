@@ -12,16 +12,16 @@ get '/' do
   redirect '/index.html'
 end
 
-post '/' do
+post '/new' do
   json = request.body.read
   key = Digest::MD5.hexdigest(json)
   REDIS[key] = json
   REDIS.expire(key, 120)
   content_type :json
-  JSON 'url'  => "http://high-fog-986.heroku.com/"+key
+  JSON 'url'  => "http://high-fog-986.heroku.com/key/"+key
 end
 
-get '/:key' do
+get '/key/:key' do
   content_type :json
   if (REDIS.exists(params[:key]))
     REDIS[params[:key]]

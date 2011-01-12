@@ -145,7 +145,7 @@ function publishListForTwoMinutes(){
 	var post = '{"category":"'+category+'","list":'+JSON.stringify(todos)+'}';
 	$.ajax({
 	  type: 'POST',
-	  url: '/',
+	  url: '/new',
 	  data: post,
 	  success: function(data) {$('#publish').fadeOut();$('#publish').after('<a target="_blank" href="'+data.url+'">published</a>');},
 	  dataType: 'json'
