@@ -175,6 +175,7 @@ function containsCategory(category){
             if(c==category) return true;
         }
     }
+	if (category == "main") return true;
 	return false;
 }
 
