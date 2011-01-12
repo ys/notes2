@@ -1,0 +1,115 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	padding:20px;
+}
+body, input {
+	font-family: 'Josefin Sans', arial, serif;
+}
+header{
+	margin:10px 0 0 25px;
+	height:30px;
+}
+header h1 { 
+	width:100px;
+	display:block;
+}
+header h1:hover{
+	text-decoration: line-through;
+	width:100px;
+	
+}
+section{
+	display:block;
+	font-size:25px;	
+	margin:25px 25px 0 25px
+	
+}
+article, #new{
+	display:block;
+	border-top:1px dotted black;
+	padding:15px;
+	
+	
+}
+#new{
+	margin-top:0;
+	position:relative;
+}
+#clear{
+	opacity:0.3;
+	position:absolute;
+	top:25px;
+	right:25px;
+}
+#clear:hover{
+	opacity:1;
+}
+a{
+	color:black;
+	text-decoration:none;
+}
+article span{
+	margin-left:10px;
+}
+.delete{
+	opacity:0.3;
+	float:right;
+}
+.delete:hover{
+	opacity:1;
+}
+input{
+	border:0;
+	
+}
+input[type="text"]{
+	font-size:25px;	
+	width:100%;
+	float:left;
+}
+
+input:focus{
+	outline:none;	
+	
+
+}
+
+.cross{
+	text-decoration: line-through;
+}
+footer{
+	display:block;
+	opacity:0.3;
+	margin-top:20px;
+	margin-right:25px;
+	text-align:right;
+	float:right;
+	font-size:12px;
+}
+footer:hover{
+	opacity:1;
+}
+ul {
+	list-style:none;
+}
+ul li{
+	list-style:none;
+	float:left;
+	margin-left:5px;
+	font-size:12px;
+	display:none;
+}
+a.selected{
+	text-decoration:underline;
+}
+li input[type="text"], li a{
+	font-size:18px; 
+
+}
+menu{
+	display:block;	
+	padding:0;
+}
