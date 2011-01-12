@@ -149,6 +149,13 @@ function publishListForTwoMinutes(){
 	});
 	return false;
 }
+function importCategory(){
+	var url = $('#importUrl').val();
+	$.getJSON(url, function(data) {
+	  alert(data);
+	});
+	
+}
 
 function activatePlaceholders() {
     var detect = navigator.userAgent.toLowerCase();
@@ -241,7 +248,13 @@ $(function() {
             $(this).nextAll('span').removeClass('cross');
         }
     });
-
+	
+	$('#importUrl').keydown(function(e) {
+        if (e.which == 13) {
+            importCategory();
+        }
+    });
+	
 	$('#import').click(function(e) {
 			//Cancel the link behavior
 			e.preventDefault();
